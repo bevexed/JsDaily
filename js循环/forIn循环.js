@@ -5,5 +5,7 @@ let o = {
 };
 
 for (let k in o) {
-    console.log(`${k} : ${o[k]}`)
+    if (o.hasOwnProperty(key)) {
+        console.log(`${k} : ${o[k]}`)
+    }
 }
