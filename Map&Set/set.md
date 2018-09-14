@@ -35,4 +35,44 @@ function removeSameItem(arr) {
 3. entries() 返回键值对
 4. forEach() 遍历每个成员并且返回回掉函数
 
+```
+let set = new Set([1,2,3])
+for (let item of set.keys()){
+    console.log(item)
+}
+for (let item of set.values()){
+    console.log(item)
+}
+for (let item of set.entries()){
+    console.log(item)
+}
+set.forEach(
+    (item, key, array) => {
+        console.log(`item * 2 = ${item * 2}`)
+        console.log(`key : key`)
+        console.log(array)
+    }
+)
+```
+##### map filter 的方法也可以用于Set
+```
+let set = new Set([1,2,3])
+[...set].map(x => x*2)
+```
+
+##### Set实现差集（Difference）、交集（Intersect）、并集（Union）
+```
+let a = new Set([1,2,3])
+let b = new Set([2,3,4])
+
+//并集
+let union = new Set([...a,...b])
+
+//交集
+let intersect = new Set([...a].filter(x => b.has(x)))
+
+//差集
+let diffirent = new Set ([...a].filter(x => !b.has(x)))
+```
+
 
