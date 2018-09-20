@@ -11,7 +11,18 @@ class Animal {
         this.age = age
     }
     //在 class 内部， 通过 static 修饰的属性 => 静态属性
-    // static info = "eee"  //es7 好使
+    // static info = "eee"  //不好使
+
+    //实例方法
+    say(a){
+        console.log(a)
+    }
+    
+    //静态方法
+    static see(a){
+        console.log(a)
+    }
+
 }
 
 
@@ -26,3 +37,5 @@ const a = new Animal('猫',2)
 console.log(a)
 console.log(a.name) //实例属性
 console.log(Animal.info)//静态属性
+Animal.see(12)//静态方法
+a.say(123)//实例方法
