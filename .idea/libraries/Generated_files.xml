@@ -3,12 +3,14 @@
     <properties>
       <sourceFilesUrls>
         <item url="file://$PROJECT_DIR$/dist/Promise/promise.js" />
+        <item url="file://$PROJECT_DIR$/dist/fenZhu.js" />
         <item url="file://$PROJECT_DIR$/dist/getQueryString.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/dist/Promise/p.js" />
       <root url="file://$PROJECT_DIR$/dist/Promise/promise.js" />
+      <root url="file://$PROJECT_DIR$/dist/fenZhu.js" />
       <root url="file://$PROJECT_DIR$/dist/getQueryString.js" />
     </CLASSES>
     <SOURCES />
