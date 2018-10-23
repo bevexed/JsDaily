@@ -2,13 +2,14 @@
   <library name="Generated files" type="javaScript">
     <properties>
       <sourceFilesUrls>
-        <item url="file://$PROJECT_DIR$/dist/Promise/p.js" />
         <item url="file://$PROJECT_DIR$/dist/Promise/promise.js" />
+        <item url="file://$PROJECT_DIR$/dist/getQueryString.js" />
       </sourceFilesUrls>
     </properties>
     <CLASSES>
       <root url="file://$PROJECT_DIR$/dist/Promise/p.js" />
       <root url="file://$PROJECT_DIR$/dist/Promise/promise.js" />
+      <root url="file://$PROJECT_DIR$/dist/getQueryString.js" />
     </CLASSES>
     <SOURCES />
   </library>
