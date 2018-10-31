@@ -12,7 +12,8 @@ let a = Array.from([1,2,3.4]) // a = [1,2,3,4]
 let b = Array.from("123") // b = [1,2,3]
 ```
 ## 原型链上的方法
-### 1. copyWithin
+### 一般方法
+#### 1. copyWithin
 * 从原数组中读取内容 替换数组中`指定位置`的内容
 * copyWithin([替换目标起始位置]，[查找起始位置], [查找的结束位置(不包括，不写默认到结束)])
 * 会改变原数组，但是长度不变
@@ -20,26 +21,30 @@ let b = Array.from("123") // b = [1,2,3]
 let arr = [1,2,3,4,5,6,7,8]
 let res = arr.copyWithin(4,2,4)  // res = [1,2,3,4,3,4,7,8]
 ```
-### 2. fill
+#### 2. fill
 * fill(['指定元素'],[开始位置],[结束位置])
 * 将数组的每一项变成指定字符
-### 3. includes
+#### 3. includes
 * 查找数组中有没有某一项，返回`布尔值`
 * include([指定元素]，[开始位置])
-### 4. filter
+
+## 可遍历方法
+* 除了`reduce`&`reduceRight`方法,其余方法的第一个参数是一个函数，这个函数中的this指向window，
+可以通过第二参数的来改变第一个函数中this的指向
+#### 1. filter
 * 遍历数组，返回`true`的元素被保留
 ```
 filter(function ([item],[index],[原数组]){ return })
 ```
-### 5. find
+#### 2. find
 * 遍历数组，一旦返回`true`，停止查找，返回`当前项`
-### 6. findIndex
+#### 3. findIndex
 * 遍历数组，一旦返回`true`，停止查找，返回`当前项的索引`
-### 7. every
+#### 4. every
 * 遍历数组，一旦返回`false`，停止遍历，返回`false`
-### 8. some
+#### 5. some
 * 遍历数组，一旦返回`true`，停止遍历，返回`true`
-### 9. reduce
+#### 6. reduce
 * 迭代
 * reduce(function ([prev]，[item]){},[初始值])
 ```
@@ -50,9 +55,9 @@ arr.reduce(function (pre,item){
     return pre+item
 })
 ```
-### 10. reduceRight
+#### 7. reduceRight
 * 和reduce一样只不过是从右边开始
-### 11. keys
+#### 8. keys
 * 遍历每一项`索引`的接口 使用for of 遍历
 ```
 let arr = [1,2,3,4]
@@ -63,7 +68,7 @@ for(let key of arr){
     console.log(key) //1,2,3,4
 }
 ```
-### entries
+#### 9. entries
 * 遍历接口 可以遍历到索引和数组的每一项,每一次遍历得到一个数组`[索引，当前项]`
 ```
 let arr = [1,2,3,4]
