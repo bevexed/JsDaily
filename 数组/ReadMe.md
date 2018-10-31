@@ -27,6 +27,14 @@ let res = arr.copyWithin(4,2,4)  // res = [1,2,3,4,3,4,7,8]
 #### 3. includes
 * 查找数组中有没有某一项，返回`布尔值`
 * include([指定元素]，[开始位置])
+#### 4. in
+* 判断数组`索引`上是否有值，返回`布尔值`
+```
+let arr = [,,,,,]  // 有几个逗号数组长度就是几
+let arr2 = [,,,,undefined] //undefined 不是空位
+
+```
+* `在es5中直接跳过空位`，`在es6中将空位处理成undefined`
 
 ## 可遍历方法
 * 除了`reduce`&`reduceRight`方法,其余方法的第一个参数是一个函数，这个函数中的this指向window，
