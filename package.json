@@ -2,7 +2,7 @@
   "name": "js",
   "version": "1.0.0",
   "description": "",
-  "main": "lcy.js",
+  "main": "常用方法集合/数组去重.js",
   "dependencies": {},
   "devDependencies": {
     "babel-preset-env": "^1.7.0"
