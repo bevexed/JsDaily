@@ -1,17 +1,41 @@
 # 对象 Object
-* 对象的简介方式
+* 对象的简洁方式
 ```
 let name = 'a'
 let age = 10
 let obj = {name，age}
- ```
-## Object()
+```
+## set & get
+```
+let obj = {
+    _name:1,
+    get name(){
+        // 只要通过 obj获取 name属性就会触发这个函数
+        // 可以通过 return返回值
+        console.log('get被触发了');
+        return this._name
+    },
+    set name(val){
+        // 只要通过 obj给 name属性设置值就会触发这个函数
+        console.log('set被触发了');
+        // val 设置值
+        this._name = val
+    }
+}
+
+console.log(obj.name); // get被触发了 1
+obj.name = 2 // set被触发了
+console.log(obj.name); // 被触发了 2
+```
+
+## 方法
+### Object()
  * 将参数转换成对象
 ```
 console.log(Object(1));  // {Number: 1}
 console.log(Object(true)); // {Boolean: true}
 ```
-## Object.is()
+### Object.is()
 * 判断两个值是否相等(===)
 ```
 console.log(NaN === NaN); // false
@@ -19,7 +43,7 @@ console.log(-0 === 0); // true
 console.log(Object.is(NaN, NaN)); // true
 console.log(Object.is(0, -0)); // false
 ```
-## Object.assign(obj1,obj2)
+### Object.assign(obj1,obj2)
 * 合并对象(将obj2，合并到obj1上，并返回obj1)
 ```
 let obj1 = {
@@ -42,7 +66,7 @@ let obj3 = {
 let result = {...obj1, ...obj3}
 console.log(result);
 ```
-## Object.getOwnPropertyDescriptor()
+### Object.getOwnPropertyDescriptor()
 * 获取一个对象某个属性的描述
 ```
 console.log(Object.getOwnPropertyDescriptor('12345', 'length'));
@@ -52,7 +76,7 @@ console.log(Object.getOwnPropertyDescriptor('12345', 'length'));
 //   configurable: false 是否可配置
 // }
 ```
-## Object.keys()
+### Object.keys()
 * 返回值 => 数组(包含所有可枚举的的键值)
 ```
 let obj = {
@@ -62,7 +86,7 @@ let obj = {
 console.log(Object.keys(obj)); // [ 'a', 'b' ]
 ```
 
-## Object.values()
+### Object.values()
 * 返回值 => 数组(包含所有可枚举属性的属性)
 ```
 let obj = {
@@ -70,6 +94,15 @@ let obj = {
     b: 2
 }
 console.log(Object.values(obj)); // [ 1, 2 ]
+```
+### Object.entries()
+* 返回值 => 二维数组(每一项也是一个数组)
+```
+let obj = {
+    a:1,
+    b:2
+}
+console.log(Object.entries(obj)); // [ [ 'a', 1 ], [ 'b', 2 ] ]
 ```
 
 
