@@ -1,21 +1,50 @@
-# set
-> set结构不会添加重复的值
+# Set( )
+## 基本属性
+* 类似数组只有值value，没有键key
+* 通过构造函数的方式创建一个Set实例
+* 参数是一个数组或者是是一个有`iterable`接口的(数组，arguments，元素集合，Set，Map，字符串)
+```
+let a = new Set()
+console.log(a); // Set{}
+
+let b = new Set([1,2,3,4])
+console.log(b); // Set { 1, 2, 3, 4 }
+
+let c = new Set('1234')
+console.log(c); // Set { 1, 2, 3, 4 }
+
+function fn (){
+    console.log(new Set(arguments));
+}
+
+fn(1,2,3,4) // Set { 1, 2, 3, 4 }
+```
+* set结构不会添加重复的值
 * 去除数据中的重复成员
 ```
-[...new Set(array)]
+let e = new Set([1,1,1,1,1,1,1])
+console.log(e); // Set { 1 }
 ```
 ##### 在set中
 1. NAN是相等得
 2. ‘‘空对象是不想等的
 
 ##### set属性
-1. size set的成员总数
+1. `size`
+ * set的成员总数
 
 ##### set方法
-1. add(value) 返回set本身
-2. delete(value) 返回一个boolean
+1. add(value)
+* 返回set实例本身（）可以实现链式写法
+* 如果之前有则不会增加
+
+2. delete(value)
+* 返回一个boolean
+
 3. has(value) 返回一个布尔值
+* 返回一个布尔值
 4. clear()
+* 没有返回值
 
 ##### 将Set结构转换为数组
 ```
