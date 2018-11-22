@@ -53,3 +53,53 @@ let {b} = '1234'
 
 
 
+## 用途
+* 交换变量的值
+```
+ let x = 1;
+ let y = 2;
+ [x,y] = [y,x]
+ ```
+
+ * 从函数返回多个值
+ ```
+ // 返回数组
+ function example(){
+    return {1,2,3}
+ }
+ let [a,b,c] = example()
+
+ // 返回对象
+ function example(){
+    return {
+        x:1,
+        y:2
+    }
+ }
+ let{x,y} = example()
+ ```
+
+ * 函数参数的定义
+ ```
+// 参数是一组有序的值
+ function([x,y,z]){...}
+ f([1,2,3])
+
+ // 参数是一组无序的值
+ function({x,y,z}){...}
+ f({x:1,y:2,z:3})
+ ```
+
+ * 提取JSON数据
+ ```
+ let jsonData = {
+    id: 1,
+    status: "ok",
+    data: [1,2]
+ }
+
+ let {id,status,data:num} = jsonData
+
+ console.log(id, status ,num) // 1,"ok",[1,2]
+ ```
+
