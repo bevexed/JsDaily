@@ -26,42 +26,31 @@
     console.log(e); // Set { 1 }
     ```
 * 在set中
-    1. NAN是相等得
-    2. ‘‘空对象是不想等的
+    * NAN是相等得
+    * ‘‘空对象是不想等的
 
 * set属性
-    1. `size` => set的成员总数
+    * `size` => set的成员总数
 
 * set方法
-    1. add(value)
+    * add(value)
         * 返回set实例本身（）可以实现链式写法
         * 如果之前有则不会增加
 
-    2. delete(value)
+    * delete(value)
         * 返回一个boolean
 
-    3. has(value) 返回一个布尔值
+    * has(value) 返回一个布尔值
         * 返回一个布尔值
-    4. clear()
+    * clear()
         * 没有返回值
 
-* 将Set结构转换为数组
-    ```
-    const items = new Set([1,2,3]);
-    const Array = Array.from(items);
-    ```
-* 去除数组中重复数据的方法
-    ```
-    function removeSameItem(arr) {
-        return Array.from(new Set(array))
-    }
-    ```
-
 * Set遍历操作
-    1. keys() 返回键名
-    2. values() 返回键值
-    3. entries() 返回键值对
-    4. forEach() 遍历每个成员并且返回回掉函数
+    * keys() 返回键名
+    * values() 返回键值
+    * entries() 返回键值对
+    * forEach() 遍历每个成员并且返回回掉函数
+    > Set没有`key`值，所以set的key === value
 
     ```
     let set = new Set([1,2,3])
@@ -75,7 +64,7 @@
         console.log(item)
     }
     set.forEach(
-        (item, key, array) => {
+        (item, key, array) => { // item index 都是当前项value
             console.log(`item * 2 = ${item * 2}`)
             console.log(`key : key`)
             console.log(array)
@@ -86,6 +75,19 @@
     ```
     let set = new Set([1,2,3])
     [...set].map(x => x*2)
+    ```
+
+## set应用
+* 将Set结构转换为数组
+    ```
+    const items = new Set([1,2,3]);
+    const Array = Array.from(items);
+    ```
+* 去除数组中重复数据的方法
+    ```
+    function removeSameItem(arr) {
+        return Array.from(new Set(array))
+    }
     ```
 
 * Set实现差集（Difference）、交集（Intersect）、并集（Union）
@@ -99,7 +101,7 @@
     //交集
     let intersect = new Set([...a].filter(x => b.has(x)))
 
-    //差集
+    //差集 （并集 - 交集）
     let different = new Set ([...a].filter(x => !b.has(x)))
     ```
 
