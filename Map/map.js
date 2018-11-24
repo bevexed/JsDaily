@@ -8,3 +8,9 @@ map.has('Adam'); // 是否存在key 'Adam': true
 map.get('Adam'); // 67
 map.delete('Adam'); // 删除key 'Adam'
 map.get('Adam'); // undefined
+
+m.forEach((value, key, input) => {
+    console.log(key); // key
+    console.log(value); // value
+    console.log(input); // map 实例
+})

@@ -96,3 +96,27 @@
     * 不可以使用`arguments`对象，可以用`rest`参数代替
     * 不可以用`yield`命令，所以亦不可用作Generator函数
     * 箭头函数没有自己的this，所以不可以使用call(),apply(),bind()方法去改变this的指向
+
+### 绑定this
+* 函数绑定运算符 `::`
+    * `::`双冒号左边是一个对象，右边是一个函数。
+    * `::`会自动将左边的对象作为上下文环境（this对象）绑定到右边的函数上
+    * `::`取代call、apply、bind调用
+    ```
+    foo::bar // bar.bind(foo)
+    foo::bar(...arguments) // bar.apply(foo,arguments)
+    ```
+    * 如果`::`左边为空，右边是一个对象的方法，则等于将该方法绑定在该对象上
+    ```
+    let method = obj::obj.foo // let method = ::obj.foo
+    let log = ::console.log // let log = console.log.bind(console)
+    ```
+    * `::`返回值为对象，所以可以采用链式写法
+    ```
+    document.querySelectorAll("div")
+    ::find("p")
+    ::html("2333")
+    ```
+### 尾调用 `Tail Call`
+> 指某个函数的最后一步是调用另一个函数
+*
