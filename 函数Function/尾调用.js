@@ -1,0 +1,1 @@
+function a(n) {    let all    if (n === 1) {        console.log('x');        return 1    } else {        console.log(n);        all = n * a(n - 1)    }    return all}console.log(a(3));
