@@ -148,8 +148,20 @@ console.log(Object.getOwnPropertyDescriptor('12345', 'length'));
     * Object.getPropertyOf() // 读操作
     * Object.setPropertyOf() // 写操作
 ### Object.setPropertyOf()
+* Object.setPropertyOf(object, prototype)
+```
+let proto = {}
+let obj = {x: 1}
+Object.setPrototypeOf(obj, proto)
+proto.y = 2
+proto.z = 3
+
+console.log(obj.x) // 1
+console.log(obj.y) // 2
+console.log(obj.z) // 3
+```
 * Object.setPropertyOf 方法的作用与 _proto_ 相同，用来设置一个对象的prototype对象，返回参数对象本身
-*
+
 ### Object.keys()
 * 返回值 => 数组(包含所有可枚举的的键值)
 ```
@@ -197,6 +209,18 @@ console.log(Object.entries(obj)); // [ [ 'a', 1 ], [ 'b', 2 ] ]
    5. Reflect.ownKeys(obj)
        * 返回一个数组，包含对象自身的所有属性，不管属性名是Symbol还是字符串，也不管是否可以枚举
 
+### `?.` Null传导运算符
+* 只要有一个返回null或undefined，就停止继续运算，并且返回undefined
+```
+// 读取m.b.u.f
+const a = {m && m.b && m.b.u && m.b.u.f || 'default'}
+
+// 新方法
+const a = {m?.b?.u?.f}
+
+a?.b = 43 // 如果a为undefined或null本语句失效，否则a.b = 43
+delete a?.b  // 如果a为undefined或null本语句失效，否则删除a.b = 43
+```
 
 
 
