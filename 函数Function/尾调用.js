@@ -1,1 +1,1 @@
-function a(n) {    let all    if (n === 1) {        console.log('x');        return 1    } else {        console.log(n);        all = n * a(n - 1)    }    return all}console.log(a(3));
+let i= 1function a(n) {    let all    if (n === 1) {        console.log(`最后一次`);        return 1    } else {        console.log(`调用了${i++}次`);        all = n * a(n - 1)    }    return all}console.log(a(4));
