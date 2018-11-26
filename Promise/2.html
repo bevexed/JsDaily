@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loadingImg</title>
+</head>
+<body>
+<div id="div"></div>
+<script>
+    function loadImg(url) {
+        return new Promise((resolve, reject) => {
+            let img = new Image()
+            img.src = url
+            img.onload = function () {
+                resolve(img)
+            }
+            img.onerror = function (e) {
+                reject(e)
+            }
+        })
+    }
+
+    loadImg('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1543847948&di=e5a4e905be61e8009c4cb43a41a66ebc&imgtype=jpg&er=1&src=http%3A%2F%2Fwww.17qq.com%2Fimg_qqtouxiang%2F76490995.jpeg')
+        .then((res) => {
+            console.log(res);
+            document.querySelector('#div').appendChild(res)
+        }, (error) => {
+            console.log(error);
+        })
+</script>
+</body>
+</html>
