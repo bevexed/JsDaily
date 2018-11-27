@@ -77,9 +77,11 @@
     })
     ```
 * all
-    * 接收一个数组，每一项都是一个Promise对象
-    * 数组中所有的Promise都成功才会走成功的回调
-    * 只要有一个错误就会走错误的回调
+    > let p = Promise.all(\[p1, p2, p3])
+    * 接收一个类数组，每一项都是一个Promise对象，如果不是，会调用Promise.resolve方法，讲参数转为Promise实例，在进一步处理
+    * p 的状态由 p1 、p2 、p3 决定，分为两种情况:
+        * 只有p1、 p2、 p3 的状态都变成Fulfilled， p的状态才会变成变成Fulfilled，此时p1、p2、p3的返回值组成一个数组,传递给p的回调函数
+        * 只要p1、 p2、 p3 中有一个被Rejected ，p的状态就会变成Rejected， 此时第一个被Rejected的实例的返回值会传递给p的回调函数
     ```
     let p1 = new Promise((resolve, reject)=>{
         resolve('Ok')
@@ -99,7 +101,8 @@
     })
     ```
 * race
-    * 接收一个数组，每一项都是一个Promise对象
+    > let p = Promise.race(\[p1, p2, p3])
+    * 接收一个类数组，每一项都是一个Promise对象，如果不是，会调用Promise.resolve方法，讲参数转为Promise实例，在进一步处理
     * 只要有一个状态改变，实例状态就跟着改变 (无论成功还是失败)
     ```
      let p1 = new Promise((resolve, reject)=>{
