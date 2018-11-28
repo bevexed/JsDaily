@@ -53,4 +53,18 @@
     * import 命令具有提升效果,会提升到整个模块的头部并首先执行
     * import 是静态执行，所以不能使用表达式或者变量
 * export default
-    *
+    * 指定模块的默认输出
+    * 一个模块只能用一次
+    * 后面不能跟声明语句
+    ```
+    // 正确
+    var a = 1
+    export default a
+
+    // 错误
+    export default var a = 1
+    ```
+    * 可以直接输出值
+    ```
+    export default 1
+    ```
