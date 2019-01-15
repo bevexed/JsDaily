@@ -58,6 +58,16 @@ filter(function ([item],[index],[原数组]){ return })
 ```
 #### find
 * 遍历数组，一旦返回`true`，停止查找，返回`当前项`
+```js
+// 模拟源码
+Array.prototype.myFind = conditionFunc => {
+  for (let i = 0; i < this.length; i++){
+    if  (conditionFunc(this[i],i)){
+      return this[i]
+    }
+  } 
+}
+```
 #### findIndex
 * 遍历数组，一旦返回`true`，停止查找，返回`当前项的索引`
 #### every
