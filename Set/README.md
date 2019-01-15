@@ -4,7 +4,7 @@
     * 向Set中加入值的时候不会发生类型转换
     * 通过构造函数的方式创建一个Set实例
     * 参数是一个数组或者是是一个有`iterable`接口的(数组，arguments，元素集合，Set，Map，字符串)
-    ```
+    ```js
     let a = new Set()
     console.log(a); // Set{}
 
@@ -31,6 +31,7 @@
     * ‘‘空对象是不想等的
 
 * set属性
+
     * `size` => set的成员总数
 
 * set方法
