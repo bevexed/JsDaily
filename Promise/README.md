@@ -113,7 +113,7 @@ let p1 = new Promise((resolve, reject)=>{
  let p3 = new Promise((resolve, reject)=>{
      resolve('Ok')
  })
-let pRace = Promise.race([p1,p2,p3])
+let pRace = Promise.race([p1, p2, p3])
 pRace.then((res)=>{
     console.log(res)
 }).catch((e)=>{
