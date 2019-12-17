@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../常用方法集合/数组去重.js"],"names":["removeSameItem","arr","Array","from","Set"],"mappings":";;;;;QACgBA,c,GAAAA,c;AADhB;AACO,SAASA,cAAT,CAAwBC,GAAxB,EAA6B;AAChC,WAAOC,MAAMC,IAAN,CAAW,IAAIC,GAAJ,CAAQH,GAAR,CAAX,CAAP;AACH","file":"数组去重.js","sourcesContent":["//去除数据中重复数据\nexport function removeSameItem(arr) {\n    return Array.from(new Set(arr))\n}"]}

@@ -3,7 +3,7 @@
 * 每一个类中都有一个构造器
 * 如果没有手动指定构造器，会自动创建一个隐形的看不见的空构造器，类似于 constructor(){}
 * 构造器的作用，就是每当 new 这个类的时候 ，必须优先执行构造器中的代码
-    ```
+    ```js
     // ES5
     function Fn(){
         this.x = 10
@@ -26,7 +26,7 @@
     ```
 
 ### class的name
-```
+```js
 let A = class AA{
     // AA 只能在类里面使用 类的name
     constructor(){
@@ -42,7 +42,7 @@ a.getA() // AA
 ```
 
 ### class 执行
-```
+```js
 // ES5
 function BB(name){
     this.name = name
@@ -65,7 +65,7 @@ let a1 = new class{
 ```
 
 ### class 变量提升
-```
+```js
 // ES5 存在变量提升
 FF();
 new FF()
@@ -86,7 +86,7 @@ class GG{
 * 类就相当于原型，写在原型上的方法都会都被实例继承
 * 在方法前加static关键字后，该方法只有类本身可以使用
 * 静态方法可以被子类继承
-```
+```js
 class AA{
     constructor (){
         this.a == "aa"
@@ -125,7 +125,7 @@ G.getF()
 
 ### 继承
 
-```
+```js
 // ES6
 class A{
     constructor(x){

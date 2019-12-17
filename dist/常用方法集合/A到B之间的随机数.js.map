@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../常用方法集合/A到B之间的随机数.js"],"names":["randomAToB","a","b","Math","floor","random"],"mappings":";;AAAA,SAASA,UAAT,CAAoBC,CAApB,EAAuBC,CAAvB,EAA0B;AACtBC,SAAKC,KAAL,CAAWD,KAAKE,MAAL,KAAgBH,CAA3B,IAAgCD,CAAhC;AACH","file":"A到B之间的随机数.js","sourcesContent":["function randomAToB(a, b) {\n    Math.floor(Math.random() * b) + a\n}\n"]}

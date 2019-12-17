@@ -123,11 +123,11 @@ pRace.then((res)=>{
 
 ## 应用场景
 ### N级联动
-### Jquery 的 Ajax 请求
+### JQuery 的 Ajax 请求
 
-## 补充
+## 补充Q
 ### Promise 本身不是异步
-​```js
+```js
 console.log(1);
 new Promise(()=>{
   console.log(2)
@@ -138,7 +138,7 @@ console.log(3)
   ```
 
 ### then 的链式调用
-```js
+​```js
 let p1 = new Promise()
 let p2 = new Promise()
 let p3 = new Promise()
@@ -151,4 +151,4 @@ p1
 .then(res=>{
   console.log(res); // P2 的返回值
 })
-```
+  ```
