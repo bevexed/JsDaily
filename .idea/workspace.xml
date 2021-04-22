@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4207f31-a657-4956-ad9e-775a3da92b2c" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="b4207f31-a657-4956-ad9e-775a3da92b2c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/markdown-navigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/markdown-navigator.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/async/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/async/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js高性能读书笔记/DOM编程.md" beforeDir="false" afterPath="$PROJECT_DIR$/js高性能读书笔记/DOM编程.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js高性能读书笔记/js加载和执行.md" beforeDir="false" afterPath="$PROJECT_DIR$/js高性能读书笔记/js加载和执行.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +35,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+  </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
       <set>
@@ -40,6 +48,10 @@
   <component name="ProjectId" id="1SJoQZF4GFRYN6QFscM9PDo6XD0" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -59,6 +71,7 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -71,18 +84,6 @@
       <recent name="$PROJECT_DIR$/js高阶函数" />
       <recent name="$PROJECT_DIR$/js循环" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager" selected="Node.js.map.js">
     <configuration name="Proxy.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="Proxy.js" working-dir="$PROJECT_DIR$/Proxy">
@@ -115,6 +116,19 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -164,13 +178,11 @@
       <workItem from="1571291044666" duration="1339000" />
       <workItem from="1574224168679" duration="77000" />
       <workItem from="1574224267017" duration="1000" />
-    </task>
-    <task id="LOCAL-00004" summary="set方法">
-      <created>1536917744059</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1536917744059</updated>
+      <workItem from="1576559732762" duration="742000" />
+      <workItem from="1612337726925" duration="1907000" />
+      <workItem from="1616378047048" duration="880000" />
+      <workItem from="1616466929548" duration="923000" />
+      <workItem from="1619078127100" duration="1195000" />
     </task>
     <task id="LOCAL-00005" summary="class">
       <created>1537234083344</created>
@@ -508,7 +520,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574224227786</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="js高性能读书笔记">
+      <created>1576559829602</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1576559829602</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TodoView">
@@ -521,16 +540,14 @@
     </todo-panel>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -549,6 +566,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="BOM" />
@@ -583,5 +601,9 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="387" y="126" key="CommitChangelistDialog2/1680.0.1920.1080/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1576559826367" />
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2" timestamp="1576559831559">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="440" y="265" key="Vcs.Push.Dialog.v2/1680.0.1920.1080/-1920.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1576559831559" />
   </component>
 </project>
